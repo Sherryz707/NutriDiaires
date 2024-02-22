@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+
+:root[data-theme="pink"] {
+  --bg_clr: theme(colors.rose.50);
+  --shadow_post: theme(colors.purple.400);
+  --text_clr: theme(colors.gray.900);
+  --image_grayscale: 0;
+  --image_opacity: 100%;
+  --from_gradient: theme(colors.purple.700);
+  --to_gradient: theme(colors.purple.800);
+  --primary: theme(colors.purple.700);
+  --gray_text: theme(colors.gray.700);
+  --bg_lvl1_clr: theme(colors.rose.100);
+}
+:root[data-theme="green"] {
+  --bg_clr: theme(colors.sky.50);
+  --shadow_post: theme(colors.lime.400);
+  --text_clr: theme(colors.gray.900);
+  --image_grayscale: 0;
+  --image_opacity: 100%;
+  --from_gradient: theme(colors.lime.500);
+  --to_gradient: theme(colors.lime.600);
+  --primary: theme(colors.lime.600);
+  --gray_text: theme(colors.gray.500);
+  --bg_lvl1_clr: theme(colors.sky.100);
+}
+
+:root[data-theme="dark"] {
+  --bg_clr: theme(colors.purple_dark.800);
+  --shadow_post: theme(colors.purple.950);
+  --text_clr: theme(colors.pink.200);
+  --image_grayscale: 10%;
+  --image_opacity: 90%;
+  --from_gradient: theme(colors.purple.600);
+  --to_gradient: theme(colors.purple.700);
+  --primary: theme(colors.purple.700);
+  --gray_text: theme(colors.gray.400);
+  --bg_lvl1_clr: theme(colors.purple_dark.600);
+}
+
+body {
+  background-color: var(--bg_clr);
+}
+
+img {
+  filter: grayscale(var(--image_grayscale));
+  filter: opacity(var(--image_opacity));
+}
+
+.shapes-7 {
+  width: 40px;
+  height: 40px;
+  color: var(--primary);
+  position: relative;
+  background: conic-gradient(from 134deg at top, currentColor 92deg, #0000 0)
+      top,
+    conic-gradient(from -46deg at bottom, currentColor 92deg, #0000 0) bottom;
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+}
+.shapes-7:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  --g: currentColor 14.5px, #0000 0 calc(100% - 14.5px), currentColor 0;
+  background: linear-gradient(45deg, var(--g)),
+    linear-gradient(-45deg, var(--g));
+  animation: sh7 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+@keyframes sh7 {
+  33% {
+    inset: -10px;
+    transform: rotate(0deg);
+  }
+  66% {
+    inset: -10px;
+    transform: rotate(90deg);
+  }
+  100% {
+    inset: 0;
+    transform: rotate(90deg);
+  }
+}
+
+@layer components {
+  .animatedUnderline {
+    @apply font-bold text-text_clr hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] bg-gradient-to-r from-from_gradient to-to_gradient bg-[length:0%_5px] bg-left-bottom bg-no-repeat transition-all !duration-700;
+  }
+  .grid-three-two{
+    @apply mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3
+  }
+  
+}
+@layer base {
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3{
+    @apply text-lg
+  }
+  h4{
+    @apply text-base
+  }
+  h5{
+    @apply text-sm
+  }
+  h6{
+    @apply text-xs
+  }
+  /* a{
+    @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600
+  } */
+}
