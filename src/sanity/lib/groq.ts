@@ -67,7 +67,7 @@ export const categoryDetz = groq`*[_type == "category"]{
 
 // Get Site Config
 export const configQuery = groq`
-*[_type == "settings"][1] {
+*[_type == "settings"][0] {
    ...
 }
 `;
