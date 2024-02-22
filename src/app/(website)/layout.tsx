@@ -15,15 +15,15 @@ async function sharedMetaData() {
     title: {
       default:
         settings?.title ||
-        "Bloom - Blossoming Creativity",
-      template: "%s | Bloom"
+        "NutriDiaries - Growing Healthier",
+      template: "%s | NutriDiaries"
     },
     description:
       settings?.description ||
-      "Bloom: Unlock the Power of Next.js, Sanity, and Tailwind | Elevate your web projects with Bloom, a versatile template showcasing the seamless integration of Next.js, Sanity, and Tailwind CSS.",
-    keywords: ["Next.js", "Sanity", "Tailwind CSS"],
-    authors: [{ name: "Shahr Bano" }],
-    canonical: settings?.url ?? "",
+      "Embark on a journey to optimal health with NutriDiaries - your ultimate destination for all things nutrition! Explore expert advice, delicious recipes, and insightful tips to nourish your body and mind. Let NutriDiaries be your trusted companion on the path to a healthier, happier you.",
+    keywords:["nutrition", "health", "wellness", "diet", "food", "exercise", "recipes", "balance", "vitamins", "lifestyle"],
+    authors: [{ name: "Eman Shafqat" }],
+    canonical: settings?.url ?? "https://nutri-diaires.vercel.app/",
     openGraph: {
       images: [
         {
