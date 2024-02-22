@@ -10,12 +10,12 @@ export default function Footer({ title, logoSvg, copyright }: { title: string, l
       <Link href={paths.home()} className="flex items-center justify-center">
         <Image src={imgprops?.src ?? logo} width={40} height={40} alt="purple flower" />
         <span className="self-center text-2xl font-semibold whitespace-nowrap text-text_clr">
-          {title ?? ""}
+          {title ?? process.env.NEXT_PUBLIC_PAGE_NAME}
         </span>
       </Link>
 
       <span className="block text-sm text-gray_text text-center ">
-        © 2024 {copyright}
+        © 2024 {copyright || process.env.NEXT_PUBLIC_PAGE_TAGLINE}
       </span>
     </footer>
   );
