@@ -20,7 +20,7 @@ export default function Header({ title, logoSvg }: { title: string, logoSvg: str
           >
             <Image src={imgprops?.src ?? logo} width={40} height={40} alt="purple flower" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-text_clr">
-              {title || "Bloom."}
+              {title || process.env.NEXT_PUBLIC_PAGE_NAME}
             </span>
           </Link>
           <Suspense>
