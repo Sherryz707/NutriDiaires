@@ -11,7 +11,7 @@ async function sharedMetaData() {
   const settings = await getSettings();
 
   return {
-    metadataBase: new URL(settings.url),
+   // metadataBase: new URL(settings.url),
     title: {
       default:
         settings?.title ||
