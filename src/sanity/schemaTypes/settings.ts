@@ -96,15 +96,6 @@ export default defineType({
       type: "string",
       title: "Support Phone"
     }),
-
-    defineField({
-      name: "w3ckey",
-      type: "string",
-      title: "Web3Forms Access Key",
-      description:
-        "Enter Access key obtained from web3forms.com. It is required to make the form work."
-    }),
-
     defineField({
       name: "social",
       type: "array",
