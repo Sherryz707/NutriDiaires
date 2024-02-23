@@ -22,6 +22,10 @@ export async function POST(req: NextRequest) {
       const message = "Bad Request";
       return new Response(JSON.stringify({ message, body }), { status: 400 });
     }
+    if(body?._type==="author"){
+      const message = "Its author so no";
+      return new Response(JSON.stringify({ message, body }));
+    }
     if (body?._type === "settings") {
       revalidateTag(body._type)
       console.log(`Revalidated ${body._type}`)
