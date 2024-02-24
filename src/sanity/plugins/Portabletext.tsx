@@ -20,11 +20,30 @@ const ImageComponent = ({ value }) => {
    
   );
 };
+const IframePreview = ({ value }:any) => {
+  let { url, height } = value;
+  if (!url) {
+    return <p>Missing Embed URL</p>;
+  }
+  
+  return (
+    <iframe
+      src={url}
+      width="100%"
+      height={height || "350"}
+      className={!height ? "aspect-video rounded-md" : "aspect-square rounded-md"}
+      frameBorder="0"
+      allowFullScreen
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
+    ></iframe>
+  );
+};
 const components = {
   types: {
     image: ImageComponent,
     //   code: Code,
-    //   embed: IframePreview,
+       embed: IframePreview,
     //   tables: PortableTextTable,
   },
   block: {
