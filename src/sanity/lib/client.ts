@@ -150,7 +150,7 @@ export async function getPaginatedPosts({
 }): Promise<Post[]> {
   if (client) {
     let symbol = ">";
-    let lastId: string;
+    let lastId: string="";
     let sort = "asc";
     if (prevId) {
       symbol = "<";
