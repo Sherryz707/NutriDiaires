@@ -34,7 +34,6 @@ export async function POST(req: NextRequest) {
     }
     if (body?._type === "post" ) {
       revalidatePath("/");
-     
       if (body?.categories && body?.categories.length > 0) {
          body?.categories.map((category:any) => {
            revalidatePath(`/${category._type}/${category.slug.current}`)
@@ -42,6 +41,7 @@ export async function POST(req: NextRequest) {
          })
        }
     }
+    revalidatePath("/category");
       revalidatePath(`/${body?._type}/${body?.slug.current}`)
     const message = `Updated route for: ${body} $/${body?._type}/${body?.slug.current}`;
     console.log(message,"in revalidate")
