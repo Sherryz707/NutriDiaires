@@ -61,14 +61,10 @@ const components = {
   },
   block: {
     h1: ({ children }: any) => (
-      <h1 id={"meow"}>{children}</h1>
+      <h1 id={children}>{children}</h1>
     ),
     h2: ({ children }: any) => (
-      <h2 id={children[0]?.props?.text.toLowerCase()
-    .replace(/[^a-z0-9]/g, "-")
-    .replace(/-+/g, "-")
-    .replace(/^-*/, "")
-    .replace(/-*$/, "")}>{children}</h2>
+      <h2 id={generateSlugPortableHeading(children)}>{children}</h2>
     ),
     h3: ({ children }: any) => (
       <h3 id={generateSlugPortableHeading(children)}>{children}</h3>
