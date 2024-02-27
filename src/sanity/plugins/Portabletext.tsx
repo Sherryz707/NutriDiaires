@@ -47,22 +47,22 @@ const components = {
   },
   block: {
     h1: ({ children }: any) => (
-      <h1 id={generateSlug(children)}>{children}</h1>
+      <h1 id={generateSlug(children.toString())}>{children}</h1>
     ),
     h2: ({ children }: any) => (
-      <h2 id={generateSlug(children)}>{children}</h2>
+      <h2 id={generateSlug(children.toString())}>{children}</h2>
     ),
     h3: ({ children }: any) => (
-      <h3 id={generateSlug(children)}>{children}</h3>
+      <h3 id={generateSlug(children.toString())}>{children}</h3>
     ),
     h4: ({ children }: any) => (
-      <h4 id={generateSlug(children)}>{children}</h4>
+      <h4 id={generateSlug(children.toString())}>{children}</h4>
     ),
     h5: ({ children }: any) => (
-      <h5 id={generateSlug(children)}>{children}</h5>
+      <h5 id={generateSlug(children.toString())}>{children}</h5>
     ),
     h6: ({ children }: any) => (
-      <h6 id={generateSlug(children)}>{children}</h6>
+      <h6 id={generateSlug(children.toString())}>{children}</h6>
     ),
   },
   marks: {
