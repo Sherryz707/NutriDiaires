@@ -9,18 +9,18 @@ if (!outline || outline.length <= 0) {
     <>
       {outline?.map((heading:any) => (
         <React.Fragment key={heading._key}>
-          {/* Apply indentation based on the heading level */}
-          <li className=" hover:text-primary">
             <Link
               href={"#" + heading.slug}
-              style={{
-                paddingInlineStart: `${heading.level}rem`,
-                width: "fit-content",
-              }}
+              className=" hover:text-primary"
             >
-              {getChildrenText(heading)}
+              <div className={`ml-${heading.level}`} style={{
+                paddingInlineStart: `${heading.level>1?heading.level:0.5}rem`,
+                width: "fit-content",
+                marginTop: "0.5rem",
+                marginBottom:"0.5rem"
+              }}>
+               {heading.level>1?"∘ ":"● "}{getChildrenText(heading)}</div>
             </Link>
-          </li>
           {heading.subheadings.length > 0 && (
             <TOC outline={heading.subheadings} />
           )}

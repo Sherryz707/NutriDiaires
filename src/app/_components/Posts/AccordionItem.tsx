@@ -22,7 +22,7 @@ export default function AccordionItem({
     <details
       className={`${
         isOpen ? "border-t-4 border-primary" : "border-t-4 border-bg_lvl1_clr"
-      } shadow-lg px-5 py-4 cursor-pointer transition-all duration-500 ease-in-out`}
+      } shadow-lg px-2 md:px-5 py-4 cursor-pointer transition-all duration-500 ease-in-out`}
       onClick={handleToggle}
     >
       <summary className="flex items-center gap-x-3 justify-center">
@@ -30,7 +30,7 @@ export default function AccordionItem({
         <p className="text-2xl font-semibold ml-auto">{isOpen ? "-" : "+"}</p>
       </summary>
       {isOpen && (
-        <div className="flex flex-col gap-5 mt-[16px] ml-[16px]">
+        <div className="flex flex-col gap-5 mt-[16px] lg:ml-[16px]">
           {children}
         </div>
       )}

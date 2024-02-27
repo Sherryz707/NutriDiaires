@@ -4,7 +4,7 @@ export default function Sidebar({ outline }: any) {
   
   return (
     <aside
-      className=" self-start text-text_clr sticky top-0 h-screen lg:w-96 w-auto mt-5 py-5 overflow-y-auto hidden md:block border-t-4 border-primary"
+      className=" self-start text-text_clr sticky top-0 h-screen lg:w-80 w-64 mt-5 py-5 overflow-y-auto hidden lg:block border-t-4 border-primary"
       aria-labelledby="table-of-contents-heading"
     >
       <h3
