@@ -7,7 +7,6 @@ import Image from "next/image";
 
 const ImageComponent = ({ value }) => {
   return (
-    
       <Image
         src={urlForImage(value)}
         alt={value.alt || "Image"}
