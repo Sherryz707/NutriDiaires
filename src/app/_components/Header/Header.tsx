@@ -7,9 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/logo.svg";
 import MobileMenu from "./MobileMenu";
-import { urlForImage } from "@/sanity/lib/image";
 export default function Header({ title, logoSvg }: { title: string, logoSvg: string }) {
-  const imgprops = urlForImage(logoSvg);
   return (
     <div className="min-w-full">
       <nav className="bg-bg_clr  min-w-full md:mb-5">
@@ -18,7 +16,7 @@ export default function Header({ title, logoSvg }: { title: string, logoSvg: str
             href={paths.home()}
             className="flex items-center justify-center"
           >
-            <Image src={imgprops?.src ?? logo} width={40} height={40} alt="purple flower" />
+            <Image src={logoSvg || logo} width={40} height={40} alt="purple flower" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-text_clr">
               {title || process.env.NEXT_PUBLIC_PAGE_NAME}
             </span>

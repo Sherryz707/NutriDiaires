@@ -75,7 +75,7 @@ export default async function layout({
       />
       <Header title={settings.title} logoSvg={urlForImage(settings?.logo)?.src || ""} />
       {children}
-      <Footer title={settings.title} logoSvg={urlForImage(settings?.logo)?.src || ""} copyright={settings.copyright} />
+      <Footer title={settings.title} logoSvg={urlForImage(settings?.logo)?.src || ""} copyright={settings.copyright || "NutriDiaries - Growing Healthier"} />
     </main>
   );
 }

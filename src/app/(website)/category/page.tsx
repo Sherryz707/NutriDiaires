@@ -12,8 +12,8 @@ export default async function Category({
 }: {
   searchParams?: { [key: string]: string };
 }) {
-  let prevId = searchParams?.prev || "";
-  let nextId: string | null = searchParams?.next || null;
+  let prevId = searchParams?.prev || null;
+  let nextId = searchParams?.next || null;
 
   const page = searchParams?.page ?? "";
   const pageIndex = parseInt(page, 10) || 1;
