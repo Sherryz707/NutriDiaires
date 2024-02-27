@@ -2,6 +2,12 @@
 import React from "react";
 export const generateSlugPortableHeading = (text) => {
   let heading:string = text[0]?.props?.text || "";
+  console.log(text,"check",heading,"final",heading
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-*/, "")
+    .replace(/-*$/, ""))
   return heading
     .toLowerCase()
     .replace(/[^a-z0-9]/g, "-")

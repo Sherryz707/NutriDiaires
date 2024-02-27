@@ -56,13 +56,13 @@ const components = {
       <h3 id={generateSlugPortableHeading(children)}>{children}</h3>
     ),
     h4: ({ children }: any) => (
-      <h4 id={generateSlugPortableHeading(children.toString())}>{children}</h4>
+      <h4 id={generateSlugPortableHeading(children)}>{children}</h4>
     ),
     h5: ({ children }: any) => (
-      <h5 id={generateSlugPortableHeading(children.toString())}>{children}</h5>
+      <h5 id={generateSlugPortableHeading(children)}>{children}</h5>
     ),
     h6: ({ children }: any) => (
-      <h6 id={generateSlugPortableHeading(children.toString())}>{children}</h6>
+      <h6 id={generateSlugPortableHeading(children)}>{children}</h6>
     ),
   },
   marks: {
