@@ -16,7 +16,7 @@ export default function Breadcrumbs({
         <Link
           href={paths.Category(category.slug.current)}
           key={category.slug.current}
-          className="text-text_clr font-medium text-sm md:text-base tracking-wide bg-bg_lvl1_clr  rounded-full py-2 px-5"
+          className="text-text_clr font-medium text-sm md:text-base tracking-wide bg-bg_lvl1_clr  rounded-full py-2 px-5 border border-primary"
         >
           {category.title}
         </Link>

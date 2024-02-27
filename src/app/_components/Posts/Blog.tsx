@@ -75,11 +75,11 @@ export default function Blog({
       </div>
 
      <Suspense fallback={<p>Loading......</p>}>
-        <Accordion title="Table of Contents" key="table-of-contents" num={0}>
+        <Accordion title="Table of Contents" key="table-of-contents" num={0} size="lg">
           <SidebarMobile outline={outline} />
         </Accordion>
       </Suspense>
-      <div className="prose mx-auto my-3 dark:prose-invert prose-a:text-blue-600">
+      <div className="prose prose-strong:text-primary prose-em:text-primary mx-auto my-3 prose-a:text-blue-600 lg:min-w-full text-text_clr dark:prose-invert prose-headings:text-primary prose-ol:text-text_clr prose-ul:text-text_clr prose-li:text-text_clr ">
         {post.body && <PortableTextComponent value={post.body} />}
       </div>
       {post.author? <AuthorCard author={post.author} />:null}
