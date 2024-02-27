@@ -2,36 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */
-
 :root[data-theme="pink"] {
   --bg_clr: theme(colors.rose.50);
   --shadow_post: theme(colors.purple.400);
@@ -122,27 +92,4 @@ img {
     @apply mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3
   }
   
-}
-@layer base {
-  h1 {
-    @apply text-3xl;
-  }
-  h2 {
-    @apply text-xl;
-  }
-  h3{
-    @apply text-lg
-  }
-  h4{
-    @apply text-base
-  }
-  h5{
-    @apply text-sm
-  }
-  h6{
-    @apply text-xs
-  }
-  /* a{
-    @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600
-  } */
 }
