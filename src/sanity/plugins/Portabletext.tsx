@@ -3,7 +3,7 @@ import { PortableText } from "@portabletext/react";
 import Link from "next/link";
 import { urlForImage } from "../lib/image";
 import Image from "next/image";
-import { generateSlug } from "@/app/utils/TOC";
+import { generateSlugPortableHeading } from "@/app/utils/TOC";
 
 const ImageComponent = ({ value }) => {
   return (
@@ -47,22 +47,22 @@ const components = {
   },
   block: {
     h1: ({ children }: any) => (
-      <h1 id={generateSlug(children.toString())}>{children}</h1>
+      <h1 id={generateSlugPortableHeading(children)}>{children}</h1>
     ),
     h2: ({ children }: any) => (
-      <h2 id={generateSlug(children.toString())}>{children}</h2>
+      <h2 id={generateSlugPortableHeading(children)}>{children}</h2>
     ),
     h3: ({ children }: any) => (
-      <h3 id={generateSlug(children.toString())}>{children}</h3>
+      <h3 id={generateSlugPortableHeading(children)}>{children}</h3>
     ),
     h4: ({ children }: any) => (
-      <h4 id={generateSlug(children.toString())}>{children}</h4>
+      <h4 id={generateSlugPortableHeading(children)}>{children}</h4>
     ),
     h5: ({ children }: any) => (
-      <h5 id={generateSlug(children.toString())}>{children}</h5>
+      <h5 id={generateSlugPortableHeading(children)}>{children}</h5>
     ),
     h6: ({ children }: any) => (
-      <h6 id={generateSlug(children.toString())}>{children}</h6>
+      <h6 id={generateSlugPortableHeading(children)}>{children}</h6>
     ),
   },
   marks: {
